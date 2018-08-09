@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test name="Test" verbose="2">
+ 	<parameter name="username" value="zhaoming" />
+  	<parameter name="password" value="123456"/>
+  	<parameter name="url" value="http://yrykbalphatest.qa.v2.xiaoyangedu.net"/>
+    <!-- bean对象 -->
+    <classes>
+      <class name="com.test.common.NewTest">
+      	<methods>
+      		<include name ="testlogin"/>    
+      	</methods>
+      </class>      
+    </classes>
+    </test> <!-- Test -->
+    <!-- lister-->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+   
+   
+</suite> <!-- Suite -->
